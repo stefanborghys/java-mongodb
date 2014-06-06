@@ -8,15 +8,65 @@
   <name>java-mongodb</name>
   <url>http://www.seriousbusiness.be</url>
   <dependencies>
-    <dependency>
-		<groupId>junit</groupId>
-		<artifactId>junit</artifactId>
-		<version>4.11</version>
-	</dependency>
 	<dependency>
 		<groupId>org.mongodb</groupId>
 		<artifactId>mongo-java-driver</artifactId>
 		<version>2.12.2</version>
 	</dependency>
+    <dependency>
+        <groupId>org.springframework.data</groupId>
+        <artifactId>spring-data-mongodb</artifactId>
+        <version>1.5.0.RELEASE</version>
+    </dependency>
+    <dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-core</artifactId>
+		<version>4.0.5.RELEASE</version>
+	</dependency>
+	<!-- Logging -->
+	<dependency>
+		<groupId>org.slf4j</groupId>
+		<artifactId>slf4j-api</artifactId>
+		<version>1.7.7</version>
+	</dependency>
+	<dependency>
+		<groupId>org.slf4j</groupId>
+		<artifactId>slf4j-log4j12</artifactId>
+		<version>1.7.7</version>
+	</dependency>
+	<dependency>
+		<groupId>log4j</groupId>
+		<artifactId>log4j</artifactId>
+		<version>1.2.17</version>
+	</dependency>
+    <!-- Testing -->
+    <dependency>
+		<groupId>junit</groupId>
+		<artifactId>junit</artifactId>
+		<version>4.11</version>
+		<scope>test</scope>
+	</dependency>
+    <dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-test</artifactId>
+		<version>4.0.5.RELEASE</version>
+		<scope>test</scope>
+	</dependency>
   </dependencies>
+  <build>
+  	<plugins>
+  		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-jar-plugin</artifactId>
+			<version>2.4</version>
+			<executions>
+				<execution>
+				<goals>
+					<goal>test-jar</goal>
+				</goals>
+				</execution>
+			</executions>
+			</plugin>
+  	</plugins>
+  </build>
 </project>
