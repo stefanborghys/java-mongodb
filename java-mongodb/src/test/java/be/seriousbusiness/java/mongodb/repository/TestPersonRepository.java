@@ -14,7 +14,7 @@ import be.seriousbusiness.java.mongodb.entity.Person;
 @ContextConfiguration("classpath:test-application-config.xml")
 @RunWith(SpringJUnit4ClassRunner.class)
 public class TestPersonRepository {
-	private static final Logger logger=LoggerFactory.getLogger(TestPersonRepository.class);
+	private static final Logger LOGGER=LoggerFactory.getLogger(TestPersonRepository.class);
 	@Autowired
 	private PersonRepository personRepository;
 	
@@ -58,21 +58,21 @@ public class TestPersonRepository {
 				updatedFirstName="UpdatedTestFirstName"+currentTimeMillis,
 				updatedLastName="UpdatedTestLastName"+currentTimeMillis;
 		final Person person=new Person();
-		logger.debug("New Person: {}",person);
+		LOGGER.debug("New Person: {}",person);
 		person.setFirstName(firstName);
 		person.setLastName(lastName);
-		logger.debug("Set Person first and last name: {}",person);
+		LOGGER.debug("Set Person first and last name: {}",person);
 		testPersonNotFound(person);
 		personRepository.save(person);
 		testPersonFound(person);
-		logger.debug("Saved Person: {}",person);
+		LOGGER.debug("Saved Person: {}",person);
 		person.setFirstName(updatedFirstName);
 		person.setLastName(updatedLastName);
 		personRepository.save(person);
 		testPersonFound(person);
-		logger.debug("Updated Person: {}",person);
+		LOGGER.debug("Updated Person: {}",person);
 		personRepository.delete(person);
-		logger.debug("Deleted Person: {}",person);
+		LOGGER.debug("Deleted Person: {}",person);
 		testPersonNotFound(person);
 	}
 
