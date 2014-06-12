@@ -18,9 +18,9 @@ Mac manual installation summary:
 	
 3. add MongoDB to the PATH  
 	Console:  
-	<code>export PATH=<java-mongodb-directory>/java-mongodb/mongodb/mongodb-osx-x86_64-2.6.1/bin:$PATH</code>  
+	<code>export PATH=java-mongodb-directory/java-mongodb/mongodb/mongodb-osx-x86_64-2.6.1/bin:$PATH</code>  
 	   
-	 Replace <code><java-mongodb-directory></code> by your local project path!
+	 Replace <code>java-mongodb-directory</code> by your local project path!
 
 4. run MongoDB  
 	* create a data directoy
@@ -28,9 +28,9 @@ Mac manual installation summary:
 
 	* start MongoDB  
 		Console:  
-		<code>mongod --dbpath <java-mongodb-directory>/java-mongodb/data/db --config <java-mongodb-directory>/java-mongodb/mongodb/mongodb-osx-x86_64-2.6.1/bin/mongodb.config</code>  
+		<code>mongod --dbpath java-mongodb-directory/java-mongodb/data/db --config <java-mongodb-directory>/java-mongodb/mongodb/mongodb-osx-x86_64-2.6.1/bin/mongodb.config</code>  
 		  
-		Replace <code><java-mongodb-directory></code> by your local project path!  
+		Replace <code>java-mongodb-directory</code> by your local project path!  
 	  
 		On start-up the MongodB's port number is shown.  
 		This is important because it needs to be set in the spring application-config.xml
@@ -44,18 +44,18 @@ Mac manual installation summary:
 
 # Run Mongo Client
 1. start Mongo  
-	Can be found in: <java-mongodb-directory>/java-mongodb/mongodb/mongodb-osx-x86_64-2.6.1/bin/mongo  
+	Can be found in: java-mongodb-directory/java-mongodb/mongodb/mongodb-osx-x86_64-2.6.1/bin/mongo  
 	  
-	Replace <code><java-mongodb-directory></code> by your local project path!
+	Replace <code>java-mongodb-directory</code> by your local project path!
   
 2. stop Mongo  
 Console: <code>exit</code>  
 
 # Mongo Commands
 
-| db 				| shows the name of the current database (default database is 'test')	|  
-| show dbs			| show the list of databases											|  
-| show databases	| 																		|
-| use <db-name>		| switch to a new database named <db-name>								|
+db 				: shows the name of the current database (default database is 'test')  
+show dbs		: show the list of databases    
+show databases	:  
+use <db-name>	: switch to a new database named <db-name>  
 
 
