@@ -2,18 +2,30 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+       xmlns:util="http://www.springframework.org/schema/util" 
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 	   					   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
 	   					   http://www.springframework.org/schema/data/mongo
-	   					   http://www.springframework.org/schema/data/mongo/spring-mongo-1.0.xsd">
+	   					   http://www.springframework.org/schema/data/mongo/spring-mongo-1.0.xsd
+	   					   http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
 
-	<bean id="personController" class="be.seriousbusiness.java.mongodb.repository.PersonController"/>
-	
-	<bean id="personRepository" class="be.seriousbusiness.java.mongodb.repository.PersonRepository"/>
-	
 	<!--  MongoDB -->
 	
-	<mongo:mongo id="testMongo" host="localhost" port="27017" />
+	<bean id="personController" class="be.seriousbusiness.java.mongodb.repository.PersonController"/>
+	
+	<mongo:mongo id="testMongo" host="localhost" port="27017" write-concern="SAFE">
+		<mongo:options connections-per-host="8"
+			threads-allowed-to-block-for-connection-multiplier="4"
+			connect-timeout="1000"
+			max-wait-time="1500"
+			auto-connect-retry="true"
+			socket-keep-alive="true"
+			socket-timeout="1500"
+			slave-ok="true"
+			write-number="1"
+			write-timeout="0"
+			write-fsync="true"/>
+	</mongo:mongo>
 	
 	<mongo:db-factory id="testMongoDbFactory" dbname="testMongodb" mongo-ref="testMongo" />
   
@@ -25,7 +37,13 @@
 	  	<constructor-arg ref="testMongo" />
 	  	<constructor-arg value="testMongodb" />
 	  	-->
+	  	<!--
+	  	<property name="writeConcern">
+            <util:constant static-field="com.mongodb.WriteConcern.SAFE" ></util:constant>
+        </property>
+        -->
 	</bean>
 
 	<mongo:repositories base-package="be.seriousbusiness.java.mongodb.repository" />
+	
 </beans>

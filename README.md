@@ -58,4 +58,9 @@ Console: <code>exit</code>
 - **show databases** : show the list of databases
 - **use** *db-name*	: switch to a new database named *db-name*
 
+# Tools
+
+- **MongoVue** : [http://www.mongovue.com/](http://www.mongovue.com/)  
+MongoDB manager for Windows.
+
 

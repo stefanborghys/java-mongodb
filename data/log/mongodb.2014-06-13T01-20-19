@@ -1,0 +1,49 @@
+2014-06-13T03:15:28.299+0200 [initandlisten] MongoDB starting : pid=63460 port=27017 dbpath=data/db 64-bit host=Mac-mini-van-Stefan.local
+2014-06-13T03:15:28.299+0200 [initandlisten] 
+2014-06-13T03:15:28.299+0200 [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+2014-06-13T03:15:28.299+0200 [initandlisten] db version v2.6.1
+2014-06-13T03:15:28.299+0200 [initandlisten] git version: 4b95b086d2374bdcfcdf2249272fb552c9c726e8
+2014-06-13T03:15:28.299+0200 [initandlisten] build info: Darwin mci-osx108-6.build.10gen.cc 12.5.0 Darwin Kernel Version 12.5.0: Sun Sep 29 13:33:47 PDT 2013; root:xnu-2050.48.12~1/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2014-06-13T03:15:28.299+0200 [initandlisten] allocator: system
+2014-06-13T03:15:28.300+0200 [initandlisten] options: { config: "mongodb/mongodb-osx-x86_64-2.6.1/bin/mongodb.config", net: { http: { RESTInterfaceEnabled: true, enabled: true }, port: 27017 }, storage: { dbPath: "data/db" }, systemLog: { destination: "file", path: "data/log/mongodb" } }
+2014-06-13T03:15:28.301+0200 [initandlisten] journal dir=data/db/journal
+2014-06-13T03:15:28.301+0200 [initandlisten] recover : no journal files present, no recovery needed
+2014-06-13T03:15:28.461+0200 [initandlisten] waiting for connections on port 27017
+2014-06-13T03:15:28.461+0200 [websvr] admin web console waiting for connections on port 28017
+2014-06-13T03:16:28.357+0200 [clientcursormon] mem (MB) res:50 virt:2850
+2014-06-13T03:16:28.357+0200 [clientcursormon]  mapped (incl journal view):320
+2014-06-13T03:16:28.357+0200 [clientcursormon]  connections:0
+2014-06-13T03:21:28.397+0200 [clientcursormon] mem (MB) res:27 virt:2850
+2014-06-13T03:21:28.397+0200 [clientcursormon]  mapped (incl journal view):320
+2014-06-13T03:21:28.398+0200 [clientcursormon]  connections:0
+2014-06-13T03:26:28.440+0200 [clientcursormon] mem (MB) res:26 virt:2850
+2014-06-13T03:26:28.441+0200 [clientcursormon]  mapped (incl journal view):320
+2014-06-13T03:26:28.441+0200 [clientcursormon]  connections:0
+2014-06-13T03:31:28.484+0200 [clientcursormon] mem (MB) res:8 virt:2850
+2014-06-13T03:31:28.486+0200 [clientcursormon]  mapped (incl journal view):320
+2014-06-13T03:31:28.486+0200 [clientcursormon]  connections:0
+2014-06-13T03:35:28.515+0200 [clientcursormon] mem (MB) res:9 virt:2850
+2014-06-13T03:35:28.515+0200 [clientcursormon]  mapped (incl journal view):320
+2014-06-13T03:35:28.515+0200 [clientcursormon]  connections:0
+2014-06-13T03:40:28.559+0200 [clientcursormon] mem (MB) res:9 virt:2850
+2014-06-13T03:40:28.559+0200 [clientcursormon]  mapped (incl journal view):320
+2014-06-13T03:40:28.559+0200 [clientcursormon]  connections:0
+2014-06-13T03:41:38.970+0200 [signalProcessingThread] got signal 15 (Terminated: 15), will terminate after current cmd ends
+2014-06-13T03:41:38.970+0200 [signalProcessingThread] now exiting
+2014-06-13T03:41:38.970+0200 [signalProcessingThread] dbexit: 
+2014-06-13T03:41:38.970+0200 [signalProcessingThread] shutdown: going to close listening sockets...
+2014-06-13T03:41:38.970+0200 [signalProcessingThread] closing listening socket: 9
+2014-06-13T03:41:38.970+0200 [signalProcessingThread] closing listening socket: 11
+2014-06-13T03:41:38.970+0200 [signalProcessingThread] closing listening socket: 13
+2014-06-13T03:41:38.970+0200 [signalProcessingThread] removing socket file: /tmp/mongodb-27017.sock
+2014-06-13T03:41:38.972+0200 [signalProcessingThread] shutdown: going to flush diaglog...
+2014-06-13T03:41:38.972+0200 [signalProcessingThread] shutdown: going to close sockets...
+2014-06-13T03:41:38.972+0200 [signalProcessingThread] shutdown: waiting for fs preallocator...
+2014-06-13T03:41:38.973+0200 [signalProcessingThread] shutdown: lock for final commit...
+2014-06-13T03:41:38.973+0200 [signalProcessingThread] shutdown: final commit...
+2014-06-13T03:41:38.975+0200 [signalProcessingThread] shutdown: closing all files...
+2014-06-13T03:41:38.975+0200 [signalProcessingThread] closeAllFiles() finished
+2014-06-13T03:41:38.975+0200 [signalProcessingThread] journalCleanup...
+2014-06-13T03:41:38.975+0200 [signalProcessingThread] removeJournalFiles
+2014-06-13T03:41:38.976+0200 [signalProcessingThread] shutdown: removing fs lock...
+2014-06-13T03:41:38.976+0200 [signalProcessingThread] dbexit: really exiting now

@@ -1,0 +1,36 @@
+2014-06-13T03:31:33.341+0200 [DataFileSync] flushing diag log
+2014-06-13T03:31:33.341+0200 [initandlisten] MongoDB starting : pid=63569 port=27017 dbpath=data/db 64-bit host=Mac-mini-van-Stefan.local
+2014-06-13T03:31:33.341+0200 [initandlisten] 
+2014-06-13T03:31:33.341+0200 [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+2014-06-13T03:31:33.341+0200 [initandlisten] db version v2.6.1
+2014-06-13T03:31:33.341+0200 [initandlisten] git version: 4b95b086d2374bdcfcdf2249272fb552c9c726e8
+2014-06-13T03:31:33.342+0200 [initandlisten] build info: Darwin mci-osx108-6.build.10gen.cc 12.5.0 Darwin Kernel Version 12.5.0: Sun Sep 29 13:33:47 PDT 2013; root:xnu-2050.48.12~1/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2014-06-13T03:31:33.342+0200 [initandlisten] allocator: system
+2014-06-13T03:31:33.342+0200 [initandlisten] options: { config: "mongodb/mongodb-osx-x86_64-2.6.1/bin/mongodb.config", diaglog: 3, net: { http: { RESTInterfaceEnabled: true, enabled: true }, port: 27017 }, storage: { dbPath: "data/db" }, systemLog: { destination: "file", path: "data/log/mongodb.log" } }
+2014-06-13T03:31:33.343+0200 [initandlisten] journal dir=data/db/journal
+2014-06-13T03:31:33.343+0200 [initandlisten] recover begin
+2014-06-13T03:31:33.343+0200 [initandlisten] info no lsn file in journal/ directory
+2014-06-13T03:31:33.343+0200 [initandlisten] recover lsn: 0
+2014-06-13T03:31:33.343+0200 [initandlisten] recover data/db/journal/j._0
+2014-06-13T03:31:33.349+0200 [initandlisten] recover cleaning up
+2014-06-13T03:31:33.349+0200 [initandlisten] removeJournalFiles
+2014-06-13T03:31:33.349+0200 [initandlisten] recover done
+2014-06-13T03:31:33.388+0200 [initandlisten] ERROR: listen(): bind() failed errno:48 Address already in use for socket: 0.0.0.0:27017
+2014-06-13T03:31:33.388+0200 [initandlisten] ERROR:   addr already in use
+2014-06-13T03:31:33.492+0200 [websvr] ERROR: listen(): bind() failed errno:48 Address already in use for socket: 0.0.0.0:28017
+2014-06-13T03:31:33.492+0200 [websvr] ERROR:   addr already in use
+2014-06-13T03:31:33.493+0200 [initandlisten] now exiting
+2014-06-13T03:31:33.493+0200 [initandlisten] dbexit: 
+2014-06-13T03:31:33.493+0200 [initandlisten] shutdown: going to close listening sockets...
+2014-06-13T03:31:33.493+0200 [initandlisten] shutdown: going to flush diaglog...
+2014-06-13T03:31:33.493+0200 [initandlisten] flushing diag log
+2014-06-13T03:31:33.493+0200 [initandlisten] shutdown: going to close sockets...
+2014-06-13T03:31:33.493+0200 [initandlisten] shutdown: waiting for fs preallocator...
+2014-06-13T03:31:33.493+0200 [initandlisten] shutdown: lock for final commit...
+2014-06-13T03:31:33.493+0200 [initandlisten] shutdown: final commit...
+2014-06-13T03:31:33.495+0200 [initandlisten] shutdown: closing all files...
+2014-06-13T03:31:33.496+0200 [initandlisten] closeAllFiles() finished
+2014-06-13T03:31:33.496+0200 [initandlisten] journalCleanup...
+2014-06-13T03:31:33.496+0200 [initandlisten] removeJournalFiles
+2014-06-13T03:31:33.496+0200 [initandlisten] shutdown: removing fs lock...
+2014-06-13T03:31:33.496+0200 [initandlisten] dbexit: really exiting now

@@ -4,25 +4,34 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.data.annotation.Id;
-
+import org.springframework.data.mongodb.core.index.Indexed;
+import org.springframework.data.mongodb.core.mapping.Document;
+@Document
 public class Country {
 	@Id
 	private String id;
 	/**
-	 * Two-letter country code.
+	 * Two-letter ISO3166-1 Alpha 2 country code.
 	 */
-	private String iso3166_1Alpha2;
+	@Indexed(unique=true,dropDups=true)
+	private String iso31661Alpha2;
 	/**
-	 * Three-letter country code.
+	 * Three-letter ISO3166-1 Alpha 3 country code.
 	 */
-	private String iso3166_1Alpha3;
+	@Indexed(unique=true,dropDups=true)
+	private String iso31661Alpha3;
 	/**
-	 * Three-digit country codes.
+	 * Three-digit ISO3166-1 Numeric country codes.
 	 */
-	private String iso3166_1Numeric;
+	@Indexed(unique=true,dropDups=true)
+	private String iso31661Numeric;
+	@Indexed(unique=true,dropDups=true)
 	private String fullNameFrench;
+	@Indexed(unique=true,dropDups=true)
 	private String fullNameEnglish;
+	@Indexed(unique=true,dropDups=true)
 	private String shortNameFrench;
+	@Indexed(unique=true,dropDups=true)
 	private String shortNameEnglish;
 	
 	public String getId() {
@@ -33,28 +42,28 @@ public class Country {
 		this.id = id;
 	}
 
-	public String getIso3166_1Alpha2() {
-		return iso3166_1Alpha2;
+	public String getIso31661Alpha2() {
+		return iso31661Alpha2;
 	}
 
-	public void setIso3166_1Alpha2(final String iso3166_1Alpha2) {
-		this.iso3166_1Alpha2 = iso3166_1Alpha2;
+	public void setIso31661Alpha2(final String iso31661Alpha2) {
+		this.iso31661Alpha2 = iso31661Alpha2;
 	}
 
-	public String getIso3166_1Alpha3() {
-		return iso3166_1Alpha3;
+	public String getIso31661Alpha3() {
+		return iso31661Alpha3;
 	}
 
-	public void setIso3166_1Alpha3(final String iso3166_1Alpha3) {
-		this.iso3166_1Alpha3 = iso3166_1Alpha3;
+	public void setIso31661Alpha3(final String iso31661Alpha3) {
+		this.iso31661Alpha3 = iso31661Alpha3;
 	}
 
-	public String getIso3166_1Numeric() {
-		return iso3166_1Numeric;
+	public String getIso31661Numeric() {
+		return iso31661Numeric;
 	}
 
-	public void setIso3166_1Numeric(final String iso3166_1Numeric) {
-		this.iso3166_1Numeric = iso3166_1Numeric;
+	public void setIso31661Numeric(final String iso31661Numeric) {
+		this.iso31661Numeric = iso31661Numeric;
 	}
 
 	public String getFullNameFrench() {
@@ -93,9 +102,9 @@ public class Country {
 	public String toString(){
 		final Map<String,Object> attributes=new HashMap<String,Object>();
 		attributes.put("id",id);
-		attributes.put("iso3166-1_Alpha2",iso3166_1Alpha2);
-		attributes.put("iso3166-1_Alpha3",iso3166_1Alpha3);
-		attributes.put("iso3166-1_Numeric",iso3166_1Numeric);
+		attributes.put("iso3166-1_Alpha2",iso31661Alpha2);
+		attributes.put("iso3166-1_Alpha3",iso31661Alpha3);
+		attributes.put("iso3166-1_Numeric",iso31661Numeric);
 		attributes.put("fullNameFrench",fullNameFrench);
 		attributes.put("fullNameEnglish",fullNameEnglish);
 		attributes.put("shortNameFrench",shortNameFrench);
