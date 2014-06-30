@@ -84,6 +84,9 @@ public class CountryRepositoryTest {
 		testCountryNotFound(brazil);
 	}
 	
+	/**
+	 * TODO: verify if this is properly working!
+	 */
 	@Test
 	public void testUnique(){
 		final Country brazil=new Country();

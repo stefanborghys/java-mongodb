@@ -6,7 +6,7 @@ import java.util.Map;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class TestEntityStringBuilder {
+public class EntityStringBuilderTest {
 	
 	@Test
 	public void testBuild(){

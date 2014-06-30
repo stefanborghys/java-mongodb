@@ -25,8 +25,8 @@ import de.flapdoodle.embed.process.runtime.Network;
  */
 @RunWith(Suite.class)
 @SuiteClasses({PersonRepositoryTest.class,PersonControllerTest.class,CountryRepositoryTest.class})
-public class MongoDbTestSuiteSetup {
-	private static final Logger LOGGER=LoggerFactory.getLogger(MongoDbTestSuiteSetup.class);
+public class MongoDbTestSuite {
+	private static final Logger LOGGER=LoggerFactory.getLogger(MongoDbTestSuite.class);
 	private static MongodExecutable mongodExecutable;
 	
 	@ClassRule

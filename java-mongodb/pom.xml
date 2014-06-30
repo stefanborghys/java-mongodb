@@ -64,6 +64,8 @@
   </dependencies>
   <build>
   	<plugins>
+  		<!-- Maven Jar Plugin -->
+  		<!-- Creates a jar for the test project -->
   		<plugin>
 			<groupId>org.apache.maven.plugins</groupId>
 			<artifactId>maven-jar-plugin</artifactId>
@@ -75,7 +77,27 @@
 				</goals>
 				</execution>
 			</executions>
-			</plugin>
+		</plugin>
+		<!-- Surfire Plugin -->
+		<!-- The Surefire Plugin is used during the test phase of the build lifecycle to execute the unit tests of an application.
+		It generates reports in 2 different file formats -->
+		<plugin>
+	        <groupId>org.apache.maven.plugins</groupId>
+	        <artifactId>maven-surefire-plugin</artifactId>
+	        <version>2.17</version>
+	        <configuration>
+	        	<!-- Include all tests and test suites -->
+                <includes>
+                    <include>%regex[.*Test.*]</include>
+                    <include>%regex[.*TestSuite.*]</include>
+                </includes>
+                <!-- Exclude all tests which are already included in a test suite -->
+                <excludes>
+		           <exclude>%regex[.*RepositoryTest.*]</exclude>
+		           <exclude>%regex[.*ControllerTest.*]</exclude>
+		        </excludes>                
+            </configuration>
+	    </plugin>
   	</plugins>
   </build>
 </project>
