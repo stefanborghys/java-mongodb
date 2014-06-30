@@ -16,8 +16,10 @@ import de.flapdoodle.embed.mongo.distribution.Version;
 import de.flapdoodle.embed.process.runtime.Network;
 
 /**
- * Starts a test Mongod (Mongo DB) instance before launching all test contained by this suite.</br>
- * Afterwards the Mongod is stopped.
+ * Starts a new test Mongod (Mongo DB) instance before launching all test contained by this suite.</br>
+ * Afterwards the same Mongod is stopped.</br>
+ * </br>
+ * Don't forget to add tests to this suite who need a running Mongod instance.
  * @author seriousbusiness
  *
  */
