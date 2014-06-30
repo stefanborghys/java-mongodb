@@ -11,8 +11,6 @@
 
 	<!--  MongoDB -->
 	
-	<bean id="personController" class="be.seriousbusiness.java.mongodb.repository.PersonController"/>
-	
 	<mongo:mongo id="testMongo" host="localhost" port="27017" write-concern="SAFE">
 		<mongo:options connections-per-host="8"
 			threads-allowed-to-block-for-connection-multiplier="4"
@@ -45,5 +43,7 @@
 	</bean>
 
 	<mongo:repositories base-package="be.seriousbusiness.java.mongodb.repository" />
+	
+	<bean id="personController" class="be.seriousbusiness.java.mongodb.repository.PersonController"/>
 	
 </beans>

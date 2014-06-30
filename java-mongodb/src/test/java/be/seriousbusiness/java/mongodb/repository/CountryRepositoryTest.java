@@ -2,6 +2,7 @@ package be.seriousbusiness.java.mongodb.repository;
 
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
@@ -23,7 +24,7 @@ public class CountryRepositoryTest {
 	@Autowired
 	private CountryRepository countryRepository;
 	@Autowired 
-	MongoTemplate mongoTemplate;
+	private MongoTemplate mongoTemplate;
 	
 	@Before
 	public void before(){
@@ -62,6 +63,7 @@ public class CountryRepositoryTest {
 	 * Also the full and short names in English and French are set.</br>
 	 * Afterwards the Country is deleted.
 	 */
+	@Ignore
 	@Test
 	public void testCRUD(){
 		final Country brazil=new Country();
@@ -84,6 +86,7 @@ public class CountryRepositoryTest {
 		testCountryNotFound(brazil);
 	}
 	
+	@Ignore
 	@Test
 	public void testUnique(){
 		final Country brazil=new Country();

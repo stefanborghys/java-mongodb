@@ -13,7 +13,7 @@ import be.seriousbusiness.java.mongodb.entity.Person;
 
 @ContextConfiguration({"classpath:test-application-config.xml"})
 @RunWith(SpringJUnit4ClassRunner.class)
-public class PersonRepositoryTest extends MongoDbTestSetup {
+public class PersonRepositoryTest {
 	private static final Logger LOGGER=LoggerFactory.getLogger(PersonRepositoryTest.class);
 	@Autowired
 	private PersonRepository personRepository;
